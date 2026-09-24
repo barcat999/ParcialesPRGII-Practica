@@ -5,11 +5,20 @@ Todos comparten atributos como ubicación, capacidad, y precio por noche, pero t
     b) Realice el código Java que represente su estrategia. (no codifique los métodos getters y setters)  
 */
 
-package parcial2024;
+package parcial2024.ejercicio8;
 
-public class Ejercicio8{
-
+public abstract class Alojamiento{
     
+    protected String ubicacion;
+    protected int capacidad;
+    protected double precioNoche;
 
-    
+    public Alojamiento(String ubicacion , int capacidad , double precioNoche){
+
+        this.ubicacion = ubicacion;
+        this.capacidad = capacidad;
+        this.precioNoche = precioNoche;
+
+    }
+
 }
