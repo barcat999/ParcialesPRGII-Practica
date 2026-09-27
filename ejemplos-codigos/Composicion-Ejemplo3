@@ -1,0 +1,32 @@
+public class Casa{
+    
+    //      1. el array para guardar varias habitaciones y su contador
+    private Habitacion[] habitaciones;
+    private int cantidadActual;
+    
+    public Casa(){
+        
+        //      la casa nace vacia , con espacio para construir hasta 10 habitaciones
+        this.habitaciones = new Habitacion[10];
+        this.cantidadActual = 0;
+    
+    }
+    
+    //      2. el metodo clave. Solo recibe el String , NO el objeto armado
+    public void construirHabitacion(String nombreDeLaPieza){
+        
+        if(cantidadActual < 10){
+            
+            //      el objeto Habitacion nace aca adentro usando el "new".
+            habitaciones[cantidadActual] = new Habitacion(nombreDeLaPieza);
+            
+            cantidadActual++;
+            System.out.println("Se construyo: " + nombreDeLaPieza);
+            
+        } 
+        
+        else System.out.println("No hay mas espacio en el terreno");
+        
+    }
+    
+}
