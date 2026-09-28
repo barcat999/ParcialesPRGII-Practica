@@ -52,7 +52,6 @@ public class Catalogo{
     
     }
 
-    
     public void ingresarProducto(Producto p) {      //      3. INGRESAR
         
         productos.add(p);       //      no hay "if" , no hay contadores. lo empuja al final y se estira solo
