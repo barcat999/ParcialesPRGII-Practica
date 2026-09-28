@@ -15,7 +15,9 @@ public class Rectangulo implements FiguraGeometrica{
     @Override 
     public double calcularArea(){
 
-        return base * altura;
+        double area = base * altura;
+
+        return area;
 
     }
     

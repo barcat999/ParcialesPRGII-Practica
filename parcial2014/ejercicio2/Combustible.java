@@ -1,6 +1,6 @@
 package parcial2014.ejercicio2;
 
-public class Combustible extends Producto{
+public class Combustible extends Producto implements PrecioVenta{
     
     private String tipoCombustible;
     

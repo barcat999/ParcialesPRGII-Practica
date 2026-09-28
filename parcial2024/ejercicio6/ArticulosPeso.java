@@ -1,6 +1,6 @@
 package parcial2024.ejercicio6;
 
-public class ArticulosPeso extends Articulos{
+public class ArticulosPeso extends Articulos implements Vendible{
     
     private double pesoReal; 
     private String material;
@@ -16,7 +16,7 @@ public class ArticulosPeso extends Articulos{
     @Override
     public double calcularPrecioFinal(){
 
-        double subtotal = precioUnitario * pesoReal;
+        double subtotal = super.getPrecioUnitario() * pesoReal;
         return subtotal * 1.10;
 
     }

@@ -1,6 +1,6 @@
 package parcial2014.ejercicio2;
 
-public class Aceite extends Producto{
+public class Aceite extends Producto implements PrecioVenta{
     
     private String presentacion;
     

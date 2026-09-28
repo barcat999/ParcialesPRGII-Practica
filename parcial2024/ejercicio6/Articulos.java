@@ -2,13 +2,13 @@ package parcial2024.ejercicio6;
 
 /* */
 
-public abstract class Articulos  /*implements Vendible*/{
+public abstract class Articulos{
     
     protected String marca;
     protected int codigo;
-    protected Double precioUnitario;
+    protected double precioUnitario;
 
-    public Articulos(String marca , int codigo , Double precioUnitario){
+    public Articulos(String marca , int codigo , double precioUnitario){
 
         this.marca = marca;
         this.codigo = codigo;
@@ -16,6 +16,22 @@ public abstract class Articulos  /*implements Vendible*/{
 
     }
 
-    public abstract double calcularPrecioFinal(); /*si se usa interface se eliminara esto e implementara la interfaz Vendible.java*/
+    public String getMarca(){
+
+        return marca;
+
+    }
+
+    public int getCodigo(){
+
+        return codigo;
+
+    }
+
+    public double getPrecioUnitario(){
+
+        return precioUnitario;
+
+    } 
 
 }

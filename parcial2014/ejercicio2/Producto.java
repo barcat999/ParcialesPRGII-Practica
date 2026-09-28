@@ -1,6 +1,6 @@
 package parcial2014.ejercicio2;
 
-public abstract class Producto implements PrecioVenta{
+public abstract class Producto{
     
     private String marca;
     private int codigo;

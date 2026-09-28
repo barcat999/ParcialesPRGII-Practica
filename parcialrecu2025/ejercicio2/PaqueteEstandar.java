@@ -11,7 +11,9 @@ public class PaqueteEstandar extends Paquete{
     @Override 
     public double calcularCosto(){
 
-        return peso * 1500;
+        double costo = peso * 1500;
+
+        return costo;
         
     }
 

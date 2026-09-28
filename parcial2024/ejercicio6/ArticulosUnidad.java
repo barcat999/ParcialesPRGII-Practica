@@ -1,6 +1,6 @@
 package parcial2024.ejercicio6;
 
-public class ArticulosUnidad extends Articulos{
+public class ArticulosUnidad extends Articulos implements Vendible{
     
     private String presentacion;
 
@@ -14,7 +14,7 @@ public class ArticulosUnidad extends Articulos{
     @Override
     public double calcularPrecioFinal(){
     
-        return precioUnitario * 1.21;
+        return super.getPrecioUnitario() * 1.21;
     
     }
 

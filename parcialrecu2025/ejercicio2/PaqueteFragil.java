@@ -14,7 +14,9 @@ public class PaqueteFragil extends Paquete{
     @Override 
     public double calcularCosto(){
 
-        return (peso * 1500) + recargo;
+        double costo = (peso * 1500) + recargo; 
+
+        return costo;
 
     }
 

@@ -17,7 +17,9 @@ public class AccesoriosPC extends Producto{
     public double precioVenta(){
 
         double valorDescuento = (super.getPrecioUnitario() * porcentajeDescuento) / 100;
-        return super.getPrecioUnitario() - valorDescuento;
+        double precioVenta = super.getPrecioUnitario() - valorDescuento; 
+        
+        return precioVenta;
 
     }
 

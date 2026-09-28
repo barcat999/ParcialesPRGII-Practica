@@ -12,7 +12,6 @@ public abstract class Producto{
         this.descripcion = descripcion;
         this.precioUnitario = precioUnitario;
 
-
     }
 
     /*trabajaremos con private y no  protected
