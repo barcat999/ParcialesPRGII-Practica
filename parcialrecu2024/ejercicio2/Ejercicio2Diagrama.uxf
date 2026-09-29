@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>396</x><y>330</y><w>154</w><h>121</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>253</x><y>242</y><w>154</w><h>121</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Producto
 --
 - codigo: int
@@ -9,31 +9,31 @@ Producto
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>616</y><w>209</w><h>88</h></coordinates><panel_attributes>AccesoriosPC
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>517</x><y>528</y><w>209</w><h>88</h></coordinates><panel_attributes>AccesoriosPC
 --
 - porcentajeDescuento: double
 - equipoCorrespondiente: String
 --
 + precioVenta(): double
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>143</x><y>616</y><w>154</w><h>66</h></coordinates><panel_attributes>EquiposPC
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>528</y><w>154</w><h>66</h></coordinates><panel_attributes>EquiposPC
 --
 - tipoEquipo: String
 --
 + precioVenta(): double
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>616</y><w>154</w><h>66</h></coordinates><panel_attributes>InsumosPC
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>253</x><y>528</y><w>154</w><h>66</h></coordinates><panel_attributes>InsumosPC
 --
 - equipoDestino: String
 --
 + precioVenta(): double
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>363</x><y>88</y><w>242</w><h>121</h></coordinates><panel_attributes>Catalogo
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>0</y><w>242</w><h>121</h></coordinates><panel_attributes>Catalogo
 --
 - productos: Producto[]
 - cantidadActual: int
 --
 + listarProductos(): void
 + ingresarProducto(p: Producto): void
-+ sacarProducto(codigo: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>440</y><w>33</w><h>198</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>539</x><y>385</y><w>242</w><h>253</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;10;200;210</additional_attributes></element><element><id>Relation</id><coordinates><x>209</x><y>385</y><w>209</w><h>253</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>170;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>198</y><w>33</w><h>154</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
++ sacarProducto(codigo: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>319</x><y>352</y><w>33</w><h>198</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>297</y><w>242</w><h>253</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;10;200;210</additional_attributes></element><element><id>Relation</id><coordinates><x>66</x><y>297</y><w>209</w><h>253</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>170;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>319</x><y>110</y><w>33</w><h>154</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>

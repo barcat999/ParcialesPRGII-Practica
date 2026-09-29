@@ -16,7 +16,7 @@ public class Empleado extends Persona{
     @Override 
     public void listar(){
 
-        System.out.println("Apellido: " + apellido + "Nombre: " + nombre + "DNI: " + dni + "Cargo: " + cargo + "Departamento: " + departamento);
+        System.out.println("Apellido: " + super.getApellido() + "Nombre: " + super.getNombre() + "DNI: " + super.getDni() + "Cargo: " + cargo + "Departamento: " + departamento);
 
     }
 

@@ -18,7 +18,7 @@ public class Profesor extends Persona{
     @Override 
     public void listar(){
 
-        System.out.println("Apellido: " + apellido + "Nombre: " + nombre + "DNI: " + dni + "Especialidad: " + especialidad + "Facultad: " + facultad + "Titulacion: " + titulacion);
+        System.out.println("Apellido: " + super.getApellido() + "Nombre: " + super.getNombre() + "DNI: " + super.getDni() + "Especialidad: " + especialidad + "Facultad: " + facultad + "Titulacion: " + titulacion);
 
     }
 

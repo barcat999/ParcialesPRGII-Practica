@@ -6,7 +6,7 @@ public class PaqueteFragil extends Paquete{
 
     public PaqueteFragil(double peso , String destino , int dimension , double recargo){
 
-        super(peso, destino, dimension);
+        super(peso , destino , dimension);
         this.recargo = recargo;
 
     }
@@ -14,7 +14,7 @@ public class PaqueteFragil extends Paquete{
     @Override 
     public double calcularCosto(){
 
-        double costo = (peso * 1500) + recargo; 
+        double costo = (super.getPeso() * 1500) + recargo; 
 
         return costo;
 

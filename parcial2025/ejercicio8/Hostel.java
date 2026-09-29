@@ -8,4 +8,11 @@ public class Hostel extends Alojamiento{
 
     }
     
+    @Override
+    public String obtenerReglasCheckIn(){
+
+        return "Horario estricto de 12:00 a 20:00 hs";
+
+    }
+
 }

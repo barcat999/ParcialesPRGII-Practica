@@ -7,5 +7,12 @@ public class Hotel extends Alojamiento{
         super(ubicacion , capacidad , precioNoche);
 
     }
+
+    @Override
+    public String obtenerReglasCheckIn(){
+    
+        return "Recepcion disponible las 24 horas";
+    
+    }
     
 }

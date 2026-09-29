@@ -13,7 +13,7 @@ public class Circulo implements FiguraGeometrica{
     @Override 
     public double calcularArea(){
     
-        double area = Math.PI * radio * radio;
+        double area = Math.PI * radio * radio;      //      sin MATH: 3.14 * radio * radio
 
         return area;
     

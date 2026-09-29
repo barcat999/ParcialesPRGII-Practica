@@ -4,6 +4,9 @@ Las notificaciones pueden enviarse por correo electrónico, SMS o mensaje intern
 Todas deben tener un método enviar(), pero cada una lo implementa de forma distinta.   
     a) ¿Cómo diseñarías las clases para que el sistema pueda manejar cualquier tipo de notificación sin saber su tipo 
     específico? ¿Qué concepto aplicarías?   
+        R: Crearia una Interfaz llamada Notificacion que defina la firma del metodo enviar(). 
+        Luego, crearia clases concretas que implementen esa interfaz y escriban su propia versiOn del metodo.
+        El concepto principal es el Polimorfismo.
     b) Realice el código Java que represente su respuesta. (no codifique los métodos getters y setters)  
 */
 

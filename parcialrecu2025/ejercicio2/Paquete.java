@@ -11,9 +11,9 @@ package parcialrecu2025.ejercicio2;
 
 public abstract class Paquete{
 
-    protected double peso;
-    protected String destino;
-    protected int dimension;
+    private double peso;
+    private String destino;
+    private int dimension;
 
     public Paquete(double peso , String destino , int dimension){
 
@@ -23,6 +23,24 @@ public abstract class Paquete{
 
     }
     
+    public double getPeso(){
+
+        return peso;
+
+    }
+
+    public String getDestino(){
+
+        return destino;
+
+    }
+
+    public int getDimension(){
+
+        return dimension;
+
+    }
+
     public abstract double calcularCosto();
 
 }

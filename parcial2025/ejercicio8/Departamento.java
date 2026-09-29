@@ -8,4 +8,11 @@ public class Departamento extends Alojamiento{
 
     }
 
+    @Override
+    public String obtenerReglasCheckIn(){
+        
+        return "Retiro de llave con clave en caja de seguridad";
+    
+    }
+
 }

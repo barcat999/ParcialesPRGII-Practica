@@ -20,7 +20,7 @@ public class RecursosHumanos{
 
     public void listarTareasPersonal(){
 
-        for (int i = 0; i < listaPersonal.size(); i++){
+        for(int i = 0 ; i < listaPersonal.size() ; i++){
             
             listaPersonal.get(i).listar();
 

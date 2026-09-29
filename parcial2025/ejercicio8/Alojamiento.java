@@ -2,6 +2,9 @@
 8) En una plataforma de turismo, se necesita representar distintos tipos de alojamiento: Hotel, Hostel, Departamento. 
 Todos comparten atributos como ubicación, capacidad, y precio por noche, pero tienen comportamientos particulares.   
     a) ¿Qué estrategia usarías para organizar las clases de forma jerárquica y reutilizable?   
+        R = Para organizar el diseño de forma jerárquica y reutilizable, aplicaría Herencia utilizando una Clase Abstracta. 
+        En esta clase centralizaría los atributos comunes (ubicacion, capacidad y precio por noche) 
+        de forma privada para respetar el encapsulamiento, evitando repetir cOdigo en las clases hijas
     b) Realice el código Java que represente su estrategia. (no codifique los métodos getters y setters)  
 */
 
@@ -43,5 +46,7 @@ public abstract class Alojamiento{
         return precioNoche;
 
     }
+
+    public abstract String obtenerReglasCheckIn();
 
 }

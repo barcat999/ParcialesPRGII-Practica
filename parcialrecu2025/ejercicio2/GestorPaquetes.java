@@ -7,7 +7,7 @@ public class GestorPaquetes{
         double total = 0; 
         
         // 2. Recorremos el arreglo de paquetes
-        for(int i = 0; i < arregloPaquetes.length; i++){
+        for(int i = 0 ; i < arregloPaquetes.length ; i++){
             
             total = total + arregloPaquetes[i].calcularCosto();
 
