@@ -1,11 +1,11 @@
 /*EJEMPLO DE 0 A MUCHOS (0..*)*/
 
-public class Equipo{
+public class MultciplidadCeroMuchos{
     
     private Jugador[] jugadores;        //      multiplicidad *: usamos un arreglo para guardar varios objetos 
     private int cantidad;
 
-    public Equipo(int maxJugadores){
+    public MultciplidadCeroMuchos(int maxJugadores){
         
         this.jugadores = new Jugador[maxJugadores];     //      instanciamos el contenedor
         this.cantidad = 0;      //      arranca vacío (cero)

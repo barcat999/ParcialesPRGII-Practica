@@ -9,15 +9,38 @@ package parcial2024.ejercicio8;
 
 public abstract class Alojamiento{
     
-    protected String ubicacion;
-    protected int capacidad;
-    protected double precioNoche;
+    private String ubicacion;
+    private int capacidad;
+    private double precioNoche;
 
     public Alojamiento(String ubicacion , int capacidad , double precioNoche){
 
         this.ubicacion = ubicacion;
         this.capacidad = capacidad;
         this.precioNoche = precioNoche;
+
+    }
+
+    /*
+    pide no codificar los getters y setters pero lo hago de igual manera 
+    solamente para resspetar los principíos de POO y no usar protected
+    */
+
+    public String getUbicacion(){
+
+        return ubicacion;
+
+    }
+
+    public int getCapacidad(){
+
+        return capacidad;
+
+    }
+
+    public double getPrecioNoche(){
+
+        return precioNoche;
 
     }
 
