@@ -3,7 +3,7 @@
     a. Definir una excepción.
     b. De lanzar una excepción.
     c. De capturar una excepción.
-Nota: Debe indicar en el código donde se cumple cada inciso.
+    Nota: Debe indicar en el código donde se cumple cada inciso.
 */
 
 public class MenorEdadException extends Exception{      //      inciso a
