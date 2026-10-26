@@ -95,5 +95,14 @@ public class MiVentana extends JFrame{
         }
         
     }
+
+    public static void main(String[] args){
+
+        MiVentana ventana = new MiVentana();
+        ventana.setSize(300 , 200);      //      define el ancho y alto en píxeles
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        ventana.setVisible(true); 
+    
+    }
     
 }

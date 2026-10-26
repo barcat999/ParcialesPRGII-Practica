@@ -5,9 +5,10 @@ Los datos son: Matricula (numérico), Apellido y Nombre (Texto). Se pide:
     - Considere que en esta instancia, los datos del alumno están soportados en un objeto Alumno.
 */
 
-import javax.swing.*;
+import java.awt.FlowLayout;
 import java.awt.event.*;
 import java.util.ArrayList;
+import javax.swing.*;
 
 class Alumno{
     
@@ -22,22 +23,34 @@ class Alumno{
         this.nombre = nombre;
         
     }
+
+    public int getMatricula(){return matricula;}
+    public String getApellido(){return apellido;}
+    public String getNombre(){return nombre;}
     
 }
 
-public class MiVentana extends JFrame{
+public class EjercicioDos extends JFrame{
     
     private ArrayList<Alumno> listaAlumnos = new ArrayList<>();
     
-    private JTextField txtMatricula = new JTextField();
-    private JTextField txtApellido = new JTextField();
-    private JTextField txtNombre = new JTextField();
+    private JTextField txtMatricula = new JTextField(15);
+    private JTextField txtApellido = new JTextField(15);
+    private JTextField txtNombre = new JTextField(15);
     private JButton btnGuardar = new JButton("GUARDAR"); 
     private JButton btnBorrar = new JButton("BORRAR"); 
     
-    public MiVentana(){
+    public EjercicioDos(){
         
         ManejadorEventos escucha = new ManejadorEventos();
+        
+        /*para botones , visual y todo eso*/
+        setLayout(new FlowLayout());
+        add(txtMatricula);
+        add(txtApellido);
+        add(txtNombre);
+        add(btnGuardar);
+        add(btnBorrar);
         
         btnGuardar.addActionListener(escucha);
         btnBorrar.addActionListener(escucha);
@@ -49,10 +62,7 @@ public class MiVentana extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e){
             
-            JButton boton = (JButton) e.getSource();
-            String accion = boton.getText();
-            
-            if(accion.equals("GUARDAR")){
+            if(e.getSource() == btnGuardar){
                 
                 int mat = Integer.parseInt(txtMatricula.getText());
                 String ape = txtApellido.getText();
@@ -64,7 +74,7 @@ public class MiVentana extends JFrame{
                 System.out.println("Alumno guardado con exito");
                 
             } 
-            else if(accion.equals("BORRAR")){
+            else if(e.getSource() == btnBorrar){
                 
                 if(!listaAlumnos.isEmpty()){
                     
@@ -78,4 +88,14 @@ public class MiVentana extends JFrame{
         }
         
     }   
+
+    public static void main(String[] args){
+
+        EjercicioDos ventana = new EjercicioDos();
+        ventana.setSize(400 , 200);      //      define el ancho y alto en píxeles
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        ventana.setVisible(true); 
+    
+    }
+
 }

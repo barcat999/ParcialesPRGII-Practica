@@ -13,76 +13,90 @@ Se pide:
         y que también capture la clásica NumberFormatException (imprimiendo "Error: Ingrese solo números").
 */
 
+import java.awt.FlowLayout;
 import java.awt.event.*;
 import javax.swing.*;
 
-/*public*/ class StockExcedidoException extends Exception{
-    
+class StockExcedidoException extends Exception{
+
     public StockExcedidoException(String mensaje){
-        
+
         super(mensaje);
-        
-    }
     
+    }
+
 }
 
-/*public*/ class ValidarStock{
-    
+class ValidarStock{
+
     public void validarStock(int cantidad) throws StockExcedidoException{
-        
-        if(cantidad > 50) throw new StockExcedidoException("ERROR: La cantidad supera al stock");
+
+        if(cantidad > 50){
+
+            throw new StockExcedidoException("ERROR: La cantidad supera al stock");
+
+        }
+
         System.out.println("Venta exitosa");
-        
+
     }
-    
+
 }
 
 public class VentanaConExcepcion extends JFrame{
     
-    private JTextField txtCampo = new JTextField();
+    private JTextField txtCampo = new JTextField(15);
     private JButton btnVender = new JButton("VENDER");
     
     public VentanaConExcepcion(){
-        
+
+        setLayout(new FlowLayout());
+        add(txtCampo);
+        add(btnVender);
+
         ManejadorEventos escucha = new ManejadorEventos();
-        
         btnVender.addActionListener(escucha);
-        
+
     }
     
     private class ManejadorEventos implements ActionListener{
-        
+
         @Override
         public void actionPerformed(ActionEvent e){
-            
-            //JButton btn = (JButton)e.getSource();
-            //String accion = btn.getText();
-            
+
             if(e.getSource() == btnVender){
-                
+
                 ValidarStock producto = new ValidarStock();
                 
                 try{
-                    
+
                     int cantidadIngresada = Integer.parseInt(txtCampo.getText());
                     producto.validarStock(cantidadIngresada);
-                    
-                }
+
+                } 
                 catch(StockExcedidoException ex){
-                    
+
                     System.out.println(ex.getMessage());
-                    
-                }
+
+                } 
                 catch(NumberFormatException ex){
-                    
+
                     System.out.println("ERROR: Ingrese solo numeros");
-                    
+
                 }
-                
+
             }
-            
+
         }
-        
+
     }
     
+    public static void main(String[] args){
+
+        VentanaConExcepcion ventana = new VentanaConExcepcion();
+        ventana.setSize(400 , 200);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        ventana.setVisible(true); 
+        
+    }
 }
