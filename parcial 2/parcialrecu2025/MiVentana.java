@@ -43,7 +43,7 @@ public class MiVentana extends JFrame{
         btnBorrar.addActionListener(escucha);
         
     }
- 
+
     private class ManejadorEventos implements ActionListener{
         
         @Override
