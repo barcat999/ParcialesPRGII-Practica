@@ -13,8 +13,8 @@ Se pide:
         y que también capture la clásica NumberFormatException (imprimiendo "Error: Ingrese solo números").
 */
 
-import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 /*public*/ class StockExcedidoException extends Exception{
     
@@ -37,12 +37,12 @@ import java.awt.event.*;
     
 }
 
-public class MiVentana extends JFrame{
+public class VentanaConExcepcion extends JFrame{
     
     private JTextField txtCampo = new JTextField();
     private JButton btnVender = new JButton("VENDER");
     
-    public MiVentana(){
+    public VentanaConExcepcion(){
         
         ManejadorEventos escucha = new ManejadorEventos();
         
@@ -55,10 +55,10 @@ public class MiVentana extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e){
             
-            JButton btn = (JButton)e.getSource();
-            String accion = btn.getText();
+            //JButton btn = (JButton)e.getSource();
+            //String accion = btn.getText();
             
-            if(accion.equals("VENDER")){
+            if(e.getSource() == btnVender){
                 
                 ValidarStock producto = new ValidarStock();
                 
@@ -70,7 +70,7 @@ public class MiVentana extends JFrame{
                 }
                 catch(StockExcedidoException ex){
                     
-                    System.out.println(e.getMessage());
+                    System.out.println(ex.getMessage());
                     
                 }
                 catch(NumberFormatException ex){
