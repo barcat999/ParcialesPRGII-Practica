@@ -55,3 +55,15 @@ esLarga xs = length xs > 3
 primerElementoSeguro :: [Int] -> Int
 primerElementoSeguro [] = 0
 primerElementoSeguro (x:_) = x
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- Funcion Lambda
+
+-- Forma tradicional
+suma x y = x + y
+
+-- Con lambda de varios argumentos
+suma = \x y -> x + y
+
+-- Con lambdas anidadas (Currificación en estado puro)
+suma = \x -> \y -> x + y
