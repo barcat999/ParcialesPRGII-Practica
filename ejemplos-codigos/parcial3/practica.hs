@@ -67,3 +67,46 @@ suma = \x y -> x + y
 
 -- Con lambdas anidadas (Currificación en estado puro)
 suma = \x -> \y -> x + y
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+misterio1 :: (Eq a , Num b) => a -> a -> b -> b
+misterio1 x y z = if x == y then z + 1 else z
+
+misterio2 :: (Num a , Ord a) => [a] -> a -> [a]
+misterio2 x y = [ z * 2 | z <- x , z > y ]
+
+misterio3 :: Ord a => a -> a -> [a] -> a
+misterio3 x y z = if x > y then head z else y
+
+misterio4 :: Ord a => a -> [a] -> [Bool]
+misterio4 x y = map (> x) y
+
+misterio5 :: Integral a => (a -> b) -> [a] -> [b]
+misterio5 f xs = map f (filter even xs)
+
+misterio6 :: Bool -> a -> [a]
+misterio6 x y = if x then [y] else []
+
+misterio7 :: Ord a => (a -> b) -> a -> [a] -> [b]
+misterio7 f x ys = map f (filter (> x) ys)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+contarElementos:: [a] -> Int
+contarElementos [] = 0
+contarElementos (_:xs) = 1 + contarElementos xs
+
+{-
+Te piden definir una función recursiva llamada duplicarElementos que reciba una lista de enteros ([Int]) y devuelva una nueva lista donde cada número fue multiplicado por 2
+sin usar map, únicamente usando patrones ([] y (x:xs)).
+
+Por ejemplo: duplicarElementos [1, 2, 3] ➔ Debe devolver [2, 4, 6]
+-}
+
+duplicarElementos :: Num a => [a] -> [a]
+duplicarElementos [] = []
+duplicarElementos (x:xs) = (x * 2) : duplicarElementos xs
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
