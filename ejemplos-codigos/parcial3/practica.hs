@@ -110,3 +110,46 @@ duplicarElementos (x:xs) = (x * 2) : duplicarElementos xs
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
+-- Listas por Comprension 
+
+doblesPares :: [Int]
+doblesPares = [ x * 2 | x <- [1..10] , even x ]
+
+combinar :: [(Int , Char)]
+combinar = [ (x , c) | x <- [1 , 2] , c <- ['a' , 'b'] ]
+
+{-
+Definí una función llamada triplesMayores usando una lista por comprensión.
+Entrada: Recibe un número entero n y una lista de enteros xs.
+Comportamiento: Devuelve una lista con los elementos de xs que sean estrictamente mayores a n
+pero multiplicados por 3.
+
+Ejemplo de prueba: triplesMayores 5 [2, 5, 8, 10] ➔ Debe devolver [24, 30].
+-}
+
+triplesMayores :: Int -> [Int] -> [Int]
+triplesMayores n xs = [ x * 3 | x <- xs , x > n ]
+
+{-
+Escribí la función soloParesPositivos usando lista por comprensión.
+Entrada: Una lista de enteros xs.
+Comportamiento: Devuelve únicamente los números que sean pares (usando even) 
+y mayores a 0 (positivos), sin modificar su valor.
+
+Ejemplo: soloParesPositivos [-4, -2, 0, 3, 4, 6] ➔ Debe devolver [4, 6].
+-}
+
+soloParesPositivos :: [Int] -> [Int]
+soloParesPositivos xs = [ x | x <- xs , even x , x > 0]
+
+{-
+Definí la función descuentosEspeciales utilizando únicamente una lista por comprensión.
+Entrada: Una lista de precios de tipo [Float].
+Comportamiento: Filtra los precios que sean estrictamente mayores a 1000 
+y calcula para cada uno su precio con un 20% de descuento (multiplicando por 0.8).
+
+Ejemplo de prueba: descuentosEspeciales [500.0, 1200.0, 800.0, 2000.0] ➔ Debe devolver [960.0, 1600.0].
+-}
+
+descuentosEspeciales:: [Float] -> [Float]
+descuentosEspeciales xs = [ x * 0.8 | x <- xs , x > 1000 ]
